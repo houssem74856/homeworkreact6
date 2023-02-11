@@ -62,3 +62,31 @@
     justify-content: space-around;
     height: 30%;
 }
+
+#cityLabel {
+    color: white;
+    font-weight: bold;
+}
+
+.modal{
+    background-color: white;
+    position: fixed;
+    width: 22.25%;
+    left: 36.45%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    border: 1px solid grey;
+    border-top: none;
+    list-style-type: none;
+    padding-left: 5px;
+    height: 27px;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.479);
+}
