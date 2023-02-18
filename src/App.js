@@ -126,13 +126,23 @@ function App() {
     setCity(searchBarValue.charAt(0).toUpperCase() + searchBarValue.slice(1))
   };
 
+  function setBorderRadius() {
+    document.getElementById("cityName").style.borderRadius = '8px'
+  }
+
+  function noBorderRadius() {
+    if(citysSuggestions.length > 0) {
+      document.getElementById("cityName").style.borderRadius = '8px 8px 0 0'
+    }
+  }
+
   return (
     <div className="App">
       <div className="weather-box">
         <form className="search-bar">
           <label id="cityLabel" htmlFor="cityName">City Name :</label>
           <div className="modalAndSearchPad">
-            <input className="search-pad" id="cityName" placeholder="city" onChange={e => handleChangeSearchBarValue(e)}></input>
+            <input className="search-pad" id="cityName" placeholder="city" onFocus={noBorderRadius} onBlur={setBorderRadius} onChange={e => handleChangeSearchBarValue(e)}></input>
             <div className="modal">
               {citysSuggestions.map(citySuggestion => {
                 return (
@@ -142,7 +152,7 @@ function App() {
               {citysSuggestions.length>0 && <div className="bottomPadding"></div>}
             </div>
           </div>
-          <button type="submit" onClick={e => handleClickSearchBtn(e)} className="search-btn">Search</button>
+          <button type="submit" onClick={e => handleClickSearchBtn(e)}>Search</button>
         </form>
         <div className="city">
           <img id="image" src="" alt="Loading..." />

@@ -58,7 +58,7 @@
     font-weight: bold;
 }
 
-.search-btn {
+.search-bar > button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +70,7 @@
     border: 0;
     padding: 0;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .modalAndSearchPad {
@@ -90,7 +91,7 @@
     background-color: white;
     position: fixed;
     width: 22.5%;
-    visibility: visible;
+    visibility: hidden;
     border-radius: 0 0 8px 8px;
 }
 
@@ -107,10 +108,15 @@ li {
 li:hover {
     cursor: pointer;
     background-color: rgb(223, 214, 214);
+    transition: 0.5s ease;
 }
 
 .search-pad:focus {
     outline: none;
+}
+
+.search-pad:focus + .modal {
+    visibility: visible;
 }
 
 .bottomPadding {

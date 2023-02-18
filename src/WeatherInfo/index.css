@@ -3,15 +3,17 @@
     align-items: center;
     flex-direction: column;
     background-color: rgb(140, 127, 255);
-    width: 30%;
+    width: 25%;
     border-radius: 4px;
+    text-align: center;
+    padding: 10px;
 }
 
-.title {
+.weather-info > p {
     color: whitesmoke;
 }
 
-.quantity {
+.weather-info > h2 {
     color: white;
 
 }
