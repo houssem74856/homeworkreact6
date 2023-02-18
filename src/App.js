@@ -27,6 +27,7 @@ function App() {
     Clear: require("./images/sun.png"),
     Clouds: require("./images/cloud.png"),
     Thunderstorm: require("./images/thunderstorm.png"),
+    Fog : require("./images/fog.png")
   };
 
   const [showWeather, setShowWeather] = useState(false);
